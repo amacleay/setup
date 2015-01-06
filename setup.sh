@@ -2,29 +2,7 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-# Install nvm: node-version manager
-# https://github.com/creationix/nvm
-sudo apt-get install -y git
-sudo apt-get install mosh
-sudo apt-get install -y curl
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-
-# Load nvm and install latest production node
-source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
-
-# Install jshint to allow checking of JS code within emacs
-# http://jshint.com/
-npm install -g jshint
-
-# Install rlwrap to provide libreadline features with node
-# See: http://nodejs.org/api/repl.html#repl_repl
-sudo apt-get install -y rlwrap
-
-# Install Heroku toolbelt
-# https://toolbelt.heroku.com/debian
-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+sudo apt-get install -y git mosh curl vim tmux
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -37,4 +15,14 @@ ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
+
+# Setup pathogen for vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+mkdir -p ~/.vim/bundle
+cd ~/.vim/bundle
+for distro in https://github.com/tpope/vim-dispatch.git https://github.com/tpope/vim-fugitive.git https://github.com/fatih/vim-go.git https://github.com/vim-perl/vim-perl.git
+do
+  git clone $distro
+done
 
