@@ -2,7 +2,7 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-sudo apt-get install -y git mosh curl vim tmux tree
+sudo apt-get install -y git mosh curl vim tmux tree golang
 
 # git pull and install dotfiles as well
 cd $HOME
