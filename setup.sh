@@ -2,7 +2,18 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-sudo apt-get install -y git mosh curl vim tmux tree golang
+sudo apt-get install -y $(echo '
+curl
+git
+golang
+htop
+libreadline-dev
+locate
+mosh
+tmux
+tree
+vim
+')
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -21,7 +32,12 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
-for distro in https://github.com/tpope/vim-dispatch.git https://github.com/tpope/vim-fugitive.git https://github.com/fatih/vim-go.git https://github.com/vim-perl/vim-perl.git
+for distro in $(echo '
+  https://github.com/tpope/vim-dispatch.git
+  https://github.com/tpope/vim-fugitive.git
+  https://github.com/fatih/vim-go.git
+  https://github.com/vim-perl/vim-perl.git
+  ')
 do
   git clone $distro
 done
