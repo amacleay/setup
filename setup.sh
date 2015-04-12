@@ -15,9 +15,6 @@ tree
 vim
 ')
 
-# perlbrew: install from web installer
-\curl -L http://install.perlbrew.pl | bash
-
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
@@ -45,4 +42,7 @@ for distro in $(echo '
 do
   git clone $distro
 done
+
+# perlbrew: install from web installer
+\curl -L http://install.perlbrew.pl | bash
 
