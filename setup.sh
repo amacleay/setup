@@ -26,6 +26,7 @@ ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
+ln -sb dotfiles/.tmux.conf .
 if ! [ -d ~/.re.pl ]; then
   mkdir ~/.re.pl
 fi
