@@ -39,6 +39,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
 for distro in $(echo '
+  https://github.com/easymotion/vim-easymotion.git
   https://github.com/fatih/vim-go.git
   https://github.com/junegunn/vim-easy-align.git
   https://github.com/tpope/vim-dispatch.git
