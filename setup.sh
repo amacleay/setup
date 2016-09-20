@@ -45,7 +45,11 @@ for distro in $(echo '
   https://github.com/junegunn/vim-easy-align.git
   https://github.com/tpope/vim-dispatch.git
   https://github.com/tpope/vim-fugitive.git
+  https://github.com/tpope/vim-sensible
   https://github.com/vim-perl/vim-perl.git
+  https://github.com/vimwiki/vimwiki
+  https://github.com/xolox/vim-easytags
+  https://github.com/xolox/vim-misc
   ')
 do
   git clone $distro
