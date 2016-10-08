@@ -9,6 +9,9 @@ cd $HOME
 sudo apt-get install -y git-core
 git clone https://github.com/amacleay/setup.git
 ./setup/setup.sh   
+
+# serve a simple site on port 8000
+cd `mktemp -d`; echo '<!doctype html><html><head><title>Shabigail 2017</title></head><body><h2>Coming soon...</h2></body></html>' > index.html; python -m SimpleHTTPServer; cd -
 ```
 
 See also http://github.com/startup-class/dotfiles and
