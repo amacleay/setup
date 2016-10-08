@@ -4,11 +4,13 @@
 
 sudo apt-get install -y $(echo '
 curl
+exuberant-ctags
 git
 golang
 htop
 libreadline-dev
 locate
+make
 mosh
 tmux
 tree
@@ -58,3 +60,5 @@ done
 # perlbrew: install from web installer
 \curl -L http://install.perlbrew.pl | bash
 
+# Install node via node version manager
+curl -L https://git.io/n-install | bash
