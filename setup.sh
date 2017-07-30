@@ -45,6 +45,8 @@ for distro in $(echo '
   https://github.com/easymotion/vim-easymotion.git
   https://github.com/fatih/vim-go.git
   https://github.com/junegunn/vim-easy-align.git
+  https://github.com/mxw/vim-jsx.git
+  https://github.com/pangloss/vim-javascript.git
   https://github.com/tpope/vim-dispatch.git
   https://github.com/tpope/vim-fugitive.git
   https://github.com/tpope/vim-sensible
