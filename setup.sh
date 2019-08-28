@@ -27,7 +27,7 @@ ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
+#ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.tmux.conf .
 if ! [ -d ~/.re.pl ]; then
   mkdir ~/.re.pl
@@ -36,22 +36,36 @@ cd ~/.re.pl
 ln -s ~/dotfiles/.re.pl/repl.rc .
 cd ~/
 
-# Setup pathogen for vim
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-mkdir -p ~/.vim/bundle
-cd ~/.vim/bundle
+mkdir -p ~/.vim/pack/git-plugins/start/
+cd ~/.vim/pack/git-plugins/start/
 for distro in $(echo '
-  https://github.com/easymotion/vim-easymotion.git
-  https://github.com/fatih/vim-go.git
-  https://github.com/junegunn/vim-easy-align.git
-  https://github.com/mxw/vim-jsx.git
-  https://github.com/pangloss/vim-javascript.git
-  https://github.com/tpope/vim-dispatch.git
-  https://github.com/tpope/vim-fugitive.git
+  https://github.com/airblade/vim-gitgutter
+  https://github.com/altercation/vim-colors-solarized
+  https://github.com/chriskempson/base16-vim
+  https://github.com/derekwyatt/vim-scala
+  https://github.com/ensime/ensime-vim
+  https://github.com/fatih/vim-go
+  https://github.com/flowtype/vim-flow
+  https://github.com/jparise/vim-graphql
+  https://github.com/junegunn/fzf.vim
+  https://github.com/junegunn/vim-easy-align
+  https://github.com/kchmck/vim-coffee-script
+  https://github.com/leafgarland/typescript-vim
+  https://github.com/majutsushi/tagbar
+  https://github.com/martinda/Jenkinsfile-vim-syntax
+  https://github.com/mxw/vim-jsx
+  https://github.com/othree/eregex.vim
+  https://github.com/pangloss/vim-javascript
+  https://github.com/tommcdo/vim-fugitive-blame-ext
+  https://github.com/tpope/vim-dispatch
+  https://github.com/tpope/vim-fugitive
+  https://github.com/tpope/vim-rails
+  https://github.com/tpope/vim-rhubarb
   https://github.com/tpope/vim-sensible
-  https://github.com/vim-perl/vim-perl.git
+  https://github.com/vim-airline/vim-airline
+  https://github.com/vim-perl/vim-perl
   https://github.com/vimwiki/vimwiki
+  https://github.com/w0rp/ale
   https://github.com/xolox/vim-easytags
   https://github.com/xolox/vim-misc
   ')
