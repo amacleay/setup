@@ -36,6 +36,7 @@ cd ~/.re.pl
 ln -s ~/dotfiles/.re.pl/repl.rc .
 cd ~/
 
+# Last time, didn't include ensime, sensible, airline,perl,easytags, or misc: maybe don't work on latest vim?
 mkdir -p ~/.vim/pack/git-plugins/start/
 cd ~/.vim/pack/git-plugins/start/
 for distro in $(echo '
